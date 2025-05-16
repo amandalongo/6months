@@ -1,0 +1,101 @@
+m:root {
+  --theme-color: #0077B6;
+  --font-color: #DFF2D8;
+  --shade1: #EABFCB;
+  --shade2: #B8F3FF;
+}
+
+body {
+  font-family: Chaucer;
+  color: #091540;
+  display: flex;
+  justify-content: center;
+  background-color: #fbf8eb;
+}
+
+.textCont {
+  font-size: 150%;
+  color: var(--font-color);
+  margin-top: 10px; 
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 60%;
+  height: 80%;
+}
+
+div.letterBody::after {
+  content: "|";
+  animation: blinky 1s linear infinite;
+}
+
+@keyframes blinky {
+  0% {
+    opacity: 0;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  99.9% {
+    opacity: 1;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+}
+
+footer > a {
+  background-color: transparent;
+  color: var(--font-color);
+  font-weight: bold;
+  font-family: "Megrim";
+  font-size: 110%;
+  text-decoration: none;
+  padding: 5px 20px;
+
+  border: 3px solid var(--font-color);
+  transition: color 0.5s linear, box-shadow 0.5s ease-in;
+}
+
+.song {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.pause {
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .textCont {
+    font-size: 95%;
+    width: 80%;
+    margin-top: 15%;
+  }
+
+  .song {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  footer {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  footer > a {
+    font-size: 95%;
+    padding: 4px 12px;
+  }
+}
+
