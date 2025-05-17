@@ -1,75 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6 Months</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <div class="text">
-      <h1>😚happy 6 months to the love of my life😚</h1> 
-      <p>below are letters i want you to open! open the top one first, and then the rest are a reflection of my favorite memories from each month that we have been together</p>
-      <p><em>click on the hearts to open your letters!</em></p>
-    </div>
-
-    <div class="cards">
-      
-      <div class="card card-full">
-        <a href="letter.html"><div class="heart"></div></a>
-        <a href="letter.html"> <div class="heart1"></div></a>
-        <a href="letter.html"> <div class="heart2"></div></a>
-        <a href="letter.html"> <div class="heart3"></div></a>
-        <a href="letter.html"> <div class="heart4"></div></a>
-      </div>
-
-    <div class="card">
-      <a href="letter2.html"><div class="heart"></div></a>
-      <a href="letter2.html"> <div class="heart1"></div></a>
-      <a href="letter2.html"> <div class="heart2"></div></a>
-      <a href="letter2.html"> <div class="heart3"></div></a>
-      <a href="letter2.html"> <div class="heart4"></div></a>
-    </div>
-   
-    <div class="card">
-      <a href="letter3.html"><div class="heart"></div></a>
-      <a href="letter3.html"> <div class="heart1"></div></a>
-      <a href="letter3.html"> <div class="heart2"></div></a>
-      <a href="letter3.html"> <div class="heart3"></div></a>
-      <a href="letter3.html"> <div class="heart4"></div></a>
-    </div>
-
-    <div class="card">
-      <a href="letter4.html"><div class="heart"></div></a>
-      <a href="letter4.html"> <div class="heart1"></div></a>
-      <a href="letter4.html"> <div class="heart2"></div></a>
-      <a href="letter4.html"> <div class="heart3"></div></a>
-      <a href="letter4.html"> <div class="heart4"></div></a>
-    </div>
-
-    <div class="card">
-      <a href="letter5.html"><div class="heart"></div></a>
-      <a href="letter5.html"> <div class="heart1"></div></a>
-      <a href="letter5.html"> <div class="heart2"></div></a>
-      <a href="letter5.html"> <div class="heart3"></div></a>
-      <a href="letter5.html"> <div class="heart4"></div></a>
-    </div>
-  
-    <div class="card">
-      <a href="letter6.html"><div class="heart"></div></a>
-      <a href="letter6.html"> <div class="heart1"></div></a>
-      <a href="letter6.html"> <div class="heart2"></div></a>
-      <a href="letter6.html"> <div class="heart3"></div></a>
-      <a href="letter6.html"> <div class="heart4"></div></a>
-    </div>
-    
-    <div class="card">
-      <a href="letter7.html"><div class="heart"></div></a>
-      <a href="letter7.html"> <div class="heart1"></div></a>
-      <a href="letter7.html"> <div class="heart2"></div></a>
-      <a href="letter7.html"> <div class="heart3"></div></a>
-      <a href="letter7.html"> <div class="heart4"></div></a>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passcode Screen</title>
+  <link rel="stylesheet" href="passcode.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Enter Passcode</h1>
+    <input type="password" id="passcode" placeholder="●●●●" maxlength="4" />
+    <button onclick="checkPasscode()">Enter</button>
+    <p id="error"></p>
   </div>
-  </body>
+
+  <script>
+    function checkPasscode() {
+      const passcode = document.getElementById("passcode").value;
+      const error = document.getElementById("error");
+      if (passcode === "1117") {
+        window.location.href = "homepage.html";
+      } else {
+        error.textContent = "Incorrect passcode. Try again.";
+      }
+    }
+  </script>
+</body>
 </html>
