@@ -80,15 +80,25 @@
     </div>
   </div>
   <script>
+    // On page load, check if the user already unlocked
+    window.onload = () => {
+      const unlocked = localStorage.getItem("unlocked");
+      if (unlocked === "true") {
+        document.getElementById("passcode-screen").style.display = "none";
+      }
+    };
+  
     function checkPasscode() {
       const input = document.getElementById("passcode").value;
       const error = document.getElementById("error-msg");
       if (input === "1117") {
         document.getElementById("passcode-screen").style.display = "none";
+        localStorage.setItem("unlocked", "true"); // save unlock status
       } else {
         error.textContent = "Incorrect passcode. Try again.";
       }
     }
   </script>
+  
   </body>
 </html>
