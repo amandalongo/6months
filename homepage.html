@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <div id="passcode-screen" class="passcode-overlay">
+      <div class="passcode-box">
+        <h2>Enter Passcode</h2>
+        <input type="password" id="passcode" maxlength="4" placeholder="●●●●" />
+        <button onclick="checkPasscode()">Unlock</button>
+        <p id="error-msg"></p>
+      </div>
+    </div>
     <div class="text">
       <h1>😚happy 6 months to the love of my life😚</h1> 
       <p>below are letters i want you to open! open the top one first, and then the rest are a reflection of my favorite memories from each month that we have been together</p>
@@ -71,5 +79,16 @@
       <a href="letter7.html"> <div class="heart4"></div></a>
     </div>
   </div>
+  <script>
+    function checkPasscode() {
+      const input = document.getElementById("passcode").value;
+      const error = document.getElementById("error-msg");
+      if (input === "1117") {
+        document.getElementById("passcode-screen").style.display = "none";
+      } else {
+        error.textContent = "Incorrect passcode. Try again.";
+      }
+    }
+  </script>
   </body>
 </html>
