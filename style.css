@@ -25,7 +25,7 @@ body {
 
 div.letterBody::after {
   content: "|";
-  animation: blinky 1s linear infinite;
+  animation: blinky .5s linear infinite;
 }
 
 @keyframes blinky {
@@ -43,29 +43,9 @@ div.letterBody::after {
   }
 }
 
-footer {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 100;
-}
-
-footer > a {
-  background-color: transparent;
-  color: var(--font-color);
-  font-weight: bold;
-  font-family: "Megrim";
-  font-size: 110%;
-  text-decoration: none;
-  padding: 5px 20px;
-
-  border: 3px solid var(--font-color);
-  transition: color 0.5s linear, box-shadow 0.5s ease-in;
-}
-
 .song {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   z-index: 10;
 }
@@ -83,19 +63,9 @@ footer > a {
 
   .song {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 20px;
     z-index: 10;
-  }
-
-  footer {
-    bottom: 15px;
-    right: 15px;
-  }
-
-  footer > a {
-    font-size: 95%;
-    padding: 4px 12px;
   }
 }
 

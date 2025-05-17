@@ -13,6 +13,12 @@
   <body>
     <br/>
     <div class="textCont"></div>
+    <div style="top: 8px; right: 40px; position:absolute;">
+      <button onclick="fastForward()" style="font-family: Chaucer; font-size: 16px; background-color: transparent; border-radius: 8px; border: 2px transparent; padding: 5px 15px; cursor: pointer;">
+        ⏩
+      </button>
+    </div>
+    
     <div class="song">
       <div class="pause" onclick="togglePlay()">🔇</div>
       <div class="player">
@@ -25,11 +31,6 @@
         ></audio>
       </div>
     </div>
-    <footer>
-      <a
-        >happy 6 months bubba</a
-      >
-    </footer>
     <script src="month4.js"></script>
     <script>
       var pause = document.querySelector(".pause");
@@ -46,8 +47,8 @@
         }
       }
     </script>
-    <div style="position: fixed; bottom: 20px; left: 20px;">
-        <a href="index.html" style="font-family: VT323, monospace; font-size: 24px; color: #333; text-decoration: none; border: 2px solid #333; padding: 5px 10px; border-radius: 8px; display: inline-block;">← Back</a>
-      </div>  
+    <div style="position: absolute; top: 10px; left: 10px;">
+      <a href="index.html" style="font-family: Chaucer; font-size: 18px; background-color: transparent; border-radius: 8px; border: 2px transparent;; padding: 5px 10px; display: inline-block;">🏠</a>
+    </div>    
   </body>
 </html>
